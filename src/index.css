@@ -4,45 +4,40 @@
 
 @layer base {
   :root {
-    --background: 36 25% 94%;
-    --foreground: 25 20% 12%;
-
-    --card: 35 20% 90%;
-    --card-foreground: 25 20% 12%;
-
-    --popover: 35 20% 90%;
-    --popover-foreground: 25 20% 12%;
-
-    --primary: 25 20% 12%;
-    --primary-foreground: 36 25% 94%;
-
-    --secondary: 35 15% 82%;
-    --secondary-foreground: 25 20% 12%;
-
-    --muted: 35 15% 82%;
-    --muted-foreground: 25 12% 42%;
-
-    --accent: 28 45% 32%;
-    --accent-foreground: 36 25% 94%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 36 25% 94%;
-
-    --border: 30 18% 75%;
-    --input: 30 18% 75%;
-    --ring: 25 20% 12%;
-
+    --background: 42 30% 95%;
+    --foreground: 160 20% 10%;
+    --card: 42 25% 91%;
+    --card-foreground: 160 20% 10%;
+    --popover: 42 25% 91%;
+    --popover-foreground: 160 20% 10%;
+    --primary: 160 20% 10%;
+    --primary-foreground: 42 30% 95%;
+    --secondary: 48 25% 82%;
+    --secondary-foreground: 160 20% 10%;
+    --muted: 48 20% 82%;
+    --muted-foreground: 160 10% 42%;
+    --accent: 152 35% 28%;
+    --accent-foreground: 42 30% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 42 30% 95%;
+    --border: 48 20% 76%;
+    --input: 48 20% 76%;
+    --ring: 152 35% 28%;
     --radius: 0rem;
 
-    /* Archive colors */
-    --sepia-dark: #1a1208;
-    --sepia-mid: #3d2b1a;
-    --sepia-warm: #7a5c3a;
-    --sepia-light: #c4a882;
-    --parchment: #f0e8d8;
-    --parchment-dark: #e2d4be;
-    --ink: #1c1410;
-    --red-accent: #8b1a1a;
+    /* Adygea palette */
+    --forest: #1a3d2b;
+    --forest-mid: #2d5c40;
+    --forest-light: #4a7c5e;
+    --gold: #c8972a;
+    --gold-light: #e8b84b;
+    --gold-pale: #f5dfa0;
+    --cream: #f5f0e8;
+    --cream-dark: #e8e0cc;
+    --ash: #1e1a14;
+    --ash-mid: #3a3028;
+    --stone: #7a6e60;
+    --red-flag: #8b1a1a;
   }
 }
 
@@ -52,10 +47,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: "IBM Plex Sans", sans-serif;
-    background-color: var(--parchment);
-    color: var(--ink);
+    background-color: var(--cream);
+    color: var(--ash);
+    font-family: "Golos Text", sans-serif;
   }
 
   h1,
@@ -73,65 +67,123 @@
   .font-cormorant-sc {
     font-family: "Cormorant SC", serif;
   }
-  .font-ibm {
-    font-family: "IBM Plex Sans", sans-serif;
+  .font-golos {
+    font-family: "Golos Text", sans-serif;
   }
 
-  .text-sepia-dark {
-    color: var(--sepia-dark);
+  .text-forest {
+    color: var(--forest);
   }
-  .text-sepia-mid {
-    color: var(--sepia-mid);
+  .text-forest-mid {
+    color: var(--forest-mid);
   }
-  .text-sepia-warm {
-    color: var(--sepia-warm);
+  .text-forest-light {
+    color: var(--forest-light);
   }
-  .text-sepia-light {
-    color: var(--sepia-light);
+  .text-gold {
+    color: var(--gold);
   }
-  .text-ink {
-    color: var(--ink);
+  .text-gold-light {
+    color: var(--gold-light);
   }
-  .text-red-accent {
-    color: var(--red-accent);
+  .text-gold-pale {
+    color: var(--gold-pale);
   }
-
-  .bg-parchment {
-    background-color: var(--parchment);
+  .text-ash {
+    color: var(--ash);
   }
-  .bg-parchment-dark {
-    background-color: var(--parchment-dark);
+  .text-ash-mid {
+    color: var(--ash-mid);
   }
-  .bg-sepia-dark {
-    background-color: var(--sepia-dark);
+  .text-stone {
+    color: var(--stone);
   }
-  .bg-sepia-mid {
-    background-color: var(--sepia-mid);
+  .text-red-flag {
+    color: var(--red-flag);
   }
-  .bg-sepia-warm {
-    background-color: var(--sepia-warm);
-  }
-
-  .border-sepia {
-    border-color: var(--sepia-light);
-  }
-  .border-sepia-dark {
-    border-color: var(--sepia-mid);
+  .text-cream {
+    color: var(--cream);
   }
 
-  .grain-overlay::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1;
+  .bg-forest {
+    background-color: var(--forest);
+  }
+  .bg-forest-mid {
+    background-color: var(--forest-mid);
+  }
+  .bg-forest-light {
+    background-color: var(--forest-light);
+  }
+  .bg-cream {
+    background-color: var(--cream);
+  }
+  .bg-cream-dark {
+    background-color: var(--cream-dark);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .bg-ash {
+    background-color: var(--ash);
+  }
+  .bg-ash-mid {
+    background-color: var(--ash-mid);
   }
 
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .border-gold-light {
+    border-color: var(--gold-light);
+  }
+  .border-forest {
+    border-color: var(--forest-mid);
+  }
+  .border-cream {
+    border-color: var(--cream-dark);
+  }
+  .border-stone {
+    border-color: var(--stone);
+  }
+
+  /* Adygea ornament top accent */
+  .ornament-band {
+    height: 5px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--gold) 0px,
+      var(--gold) 6px,
+      var(--forest) 6px,
+      var(--forest) 14px,
+      var(--gold-light) 14px,
+      var(--gold-light) 18px,
+      var(--forest) 18px,
+      var(--forest) 26px
+    );
+  }
+
+  /* Card */
+  .adygea-card {
+    background-color: var(--cream-dark);
+    border: 1px solid var(--cream-dark);
+    border-top: 3px solid var(--gold);
+    transition: all 0.3s ease;
+  }
+  .adygea-card:hover {
+    border-top-color: var(--gold-light);
+    box-shadow: 0 6px 32px rgba(26, 61, 43, 0.14);
+    transform: translateY(-3px);
+  }
+
+  /* Photo filter — warm sepia with green tint */
+  .photo-adygea {
+    filter: sepia(25%) contrast(1.1) brightness(0.95) saturate(0.9);
+  }
+
+  /* Animations */
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 0.9s ease-out forwards;
   }
-
   .animate-slide-up {
     animation: slideUp 0.7s ease-out forwards;
   }
@@ -144,11 +196,10 @@
       opacity: 1;
     }
   }
-
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(28px);
     }
     to {
       opacity: 1;
@@ -156,25 +207,13 @@
     }
   }
 
-  .section-divider {
-    border: none;
-    border-top: 1px solid var(--sepia-light);
-    margin: 0;
-  }
-
-  .archive-card {
-    background-color: var(--parchment-dark);
-    border: 1px solid var(--sepia-light);
-    transition: all 0.3s ease;
-  }
-
-  .archive-card:hover {
-    border-color: var(--sepia-warm);
-    box-shadow: 0 4px 24px rgba(26, 18, 8, 0.12);
-    transform: translateY(-2px);
-  }
-
-  .photo-frame {
-    filter: sepia(40%) contrast(1.1) brightness(0.95);
+  /* Timeline connector */
+  .timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 6px;
   }
 }
