@@ -209,7 +209,7 @@ const Index = () => {
               ДОКУМЕНТАЛЬНЫЙ ПРОЕКТ · АДЫГЕЯ
             </div>
             <div className="font-cormorant text-cream text-xl font-semibold tracking-wide leading-tight">
-              Дети войны
+              Дети войны — наши земляки
             </div>
           </button>
 
@@ -264,8 +264,8 @@ const Index = () => {
                   <span className="font-cormorant-sc text-gold text-[10px] tracking-[0.5em]">1941 — 1945</span>
                 </div>
                 <h1 className="font-cormorant text-cream text-5xl md:text-7xl font-light leading-tight mb-4">
-                  Дети войны<br />
-                  <span className="text-gold-light italic">в Адыгее</span>
+                  Дети войны —<br />
+                  <span className="text-gold-light italic">наши земляки</span>
                 </h1>
                 <p className="font-golos text-cream/75 text-base max-w-lg leading-relaxed mb-10 font-light">
                   Документальный проект о судьбах детей Адыгейской автономной области,
@@ -601,7 +601,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="font-cormorant text-cream text-xl mb-2">Дети войны в Адыгее</div>
+              <div className="font-cormorant text-cream text-xl mb-2">Дети войны — наши земляки</div>
               <div className="font-golos text-xs text-cream/40 leading-relaxed font-light">
                 Документальный проект, посвящённый памяти детей Адыгейской автономной области,
                 переживших Великую Отечественную войну.
