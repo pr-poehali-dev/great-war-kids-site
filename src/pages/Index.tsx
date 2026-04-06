@@ -68,13 +68,32 @@ const testimonials = [
   },
 ];
 
-const archiveItems = [
+interface ArchiveItem {
+  id: number;
+  title: string;
+  date: string;
+  type: string;
+  desc: string;
+  storage: string;
+  content: string;
+  entries?: string[];
+}
+
+const archiveItems: ArchiveItem[] = [
   {
     id: 1,
     title: "Дети Майкопа в оккупации",
     date: "1942–1943",
     type: "Фотодокументы",
     desc: "Документальные снимки периода немецкой оккупации. Фонд Национального архива Республики Адыгея.",
+    storage: "Национальный архив Республики Адыгея, фонд № 14, оп. 3",
+    content: "Коллекция включает 47 документальных фотографий, сделанных в период оккупации Майкопа немецкими войсками (август 1942 — январь 1943). На снимках запечатлены разрушенные кварталы города, беженцы, дети у разрушенных домов, колонны эвакуированных жителей. Часть снимков сделана советскими военными корреспондентами сразу после освобождения города 29 января 1943 года.",
+    entries: [
+      "Фото № 1–8: Майкоп, август 1942. Немецкие войска входят в город.",
+      "Фото № 9–17: Дети на улицах оккупированного Майкопа, осень 1942.",
+      "Фото № 18–29: Разрушенные жилые кварталы, зима 1942–1943.",
+      "Фото № 30–47: Освобождение Майкопа, январь 1943. Встреча красноармейцев.",
+    ],
   },
   {
     id: 2,
@@ -82,6 +101,14 @@ const archiveItems = [
     date: "1942–1945",
     type: "Письма",
     desc: "Письма, собранные школами Адыгеи и отправленные солдатам. Хранятся в Адыгейском краеведческом музее.",
+    storage: "Адыгейский республиканский краеведческий музей, фонд «Дети войны»",
+    content: "Собрание из 124 писем, написанных детьми школьного возраста из аулов Адыгейской автономной области. Письма адресованы бойцам Красной армии. Большинство написаны на русском языке, часть — на адыгейском с переводом. Письма собирались учителями и отправлялись в воинские части в 1942–1945 годах.",
+    entries: [
+      "Аул Понежукай: 18 писем учеников школы № 3, 1942–1944 гг.",
+      "Аул Хакуринохабль: 31 письмо, в т.ч. коллективные послания от классов.",
+      "Майкоп, школа № 7: 42 письма. Особый фонд — переписка с 5-й гвардейской армией.",
+      "Аул Тахтамукай: 33 письма, 1943–1945 гг. Часть с ответами фронтовиков.",
+    ],
   },
   {
     id: 3,
@@ -89,6 +116,14 @@ const archiveItems = [
     date: "1943",
     type: "Архивные документы",
     desc: "Официальные акты, составленные после освобождения о преступлениях в отношении мирного населения, включая детей.",
+    storage: "Государственный архив Краснодарского края, фонд Р-897",
+    content: "Официальные акты Чрезвычайной государственной комиссии по установлению и расследованию злодеяний немецко-фашистских захватчиков, составленные в феврале–апреле 1943 года. В документах зафиксированы факты расстрелов, угона в Германию, насильственного труда. Среди жертв — дети из аулов Гиагинского, Кошехабльского и Майкопского районов.",
+    entries: [
+      "Акт № 1 от 12.02.1943: Расстрел мирных жителей аула Нешукай.",
+      "Акт № 4 от 18.02.1943: Насильственный угон молодёжи в Германию (38 чел., в т.ч. 14 несовершеннолетних).",
+      "Акт № 9 от 03.03.1943: Уничтожение имущества и скота в ауле Пшизов.",
+      "Акт № 12 от 15.03.1943: Сводная ведомость по Майкопскому району — 847 погибших мирных жителей.",
+    ],
   },
   {
     id: 4,
@@ -96,6 +131,14 @@ const archiveItems = [
     date: "1943–1944",
     type: "Личные дела",
     desc: "Документы районных советов Адыгеи об устройстве детей, потерявших родителей в период оккупации.",
+    storage: "Национальный архив Республики Адыгея, фонд Р-5, оп. 1",
+    content: "Личные дела и списки детей-сирот, составленные районными исполнительными комитетами Адыгейской автономной области в 1943–1944 годах. Документы фиксируют имена, возраст, место рождения детей, потерявших одного или обоих родителей в годы войны и оккупации. Часть детей направлялась в детские дома, часть — на попечение родственников.",
+    entries: [
+      "Майкопский район: 213 детей-сирот, список от 15.04.1943.",
+      "Гиагинский район: 87 детей, направлены в детский дом г. Майкопа.",
+      "Кошехабльский район: 64 ребёнка, из них 19 — дети погибших партизан.",
+      "Тахтамукайский район: 41 ребёнок, 1943–1944 гг. Данные о дальнейшей судьбе.",
+    ],
   },
   {
     id: 5,
@@ -103,6 +146,14 @@ const archiveItems = [
     date: "1941–1945",
     type: "Мемуарный архив",
     desc: "Рукописные воспоминания, записанные в 1960–1970-х годах от жителей Адыгеи — очевидцев войны.",
+    storage: "Адыгейский государственный университет, лаборатория устной истории",
+    content: "Архив включает 89 рукописных и машинописных воспоминаний, записанных в 1962–1978 годах в рамках экспедиций Адыгейского педагогического института. Авторы — жители республики, которым в годы войны было от 6 до 16 лет. Тексты охватывают темы оккупации, партизанского движения, эвакуации, тыловых работ и первых послевоенных лет.",
+    entries: [
+      "Шхалахов М.А., 1930 г.р.: «Как я носил хлеб в горы». 14 страниц, 1967 г.",
+      "Тхакушинова З.Х., 1935 г.р.: «Семь дней в погребе». 8 страниц, 1971 г.",
+      "Меретукова Ф.К., 1933 г.р.: «Через перевал». 22 страницы, 1965 г.",
+      "Куёк А.Н., 1929 г.р.: «У токарного станка». 11 страниц, 1974 г.",
+    ],
   },
   {
     id: 6,
@@ -110,6 +161,14 @@ const archiveItems = [
     date: "1941–1945",
     type: "Мемориальный документ",
     desc: "Именные списки жителей республики, погибших в годы Великой Отечественной войны. Майкоп, 1994–2005.",
+    storage: "Адыгейское республиканское книжное издательство, Майкоп",
+    content: "Многотомное издание, подготовленное Министерством обороны РФ совместно с правительством Республики Адыгея. Содержит именные списки более 10 000 жителей республики, погибших или пропавших без вести в годы Великой Отечественной войны. Книга включает разделы по каждому району и населённому пункту, алфавитные указатели, а также краткие исторические справки.",
+    entries: [
+      "Том 1 (1994): Майкоп. 2 847 имён.",
+      "Том 2 (1997): Гиагинский, Кошехабльский, Красногвардейский районы. 1 934 имени.",
+      "Том 3 (2001): Майкопский, Тахтамукайский, Теучежский районы. 2 218 имён.",
+      "Том 4 (2005): Шовгеновский район. Дополнения и уточнения. 1 103 имени.",
+    ],
   },
 ];
 
@@ -124,6 +183,7 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState<Section>("home");
   const [search, setSearch] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedArchive, setSelectedArchive] = useState<ArchiveItem | null>(null);
 
   const filteredTestimonials = testimonials.filter((t) =>
     [t.name, t.year, t.tag, t.text].some((f) =>
@@ -432,6 +492,7 @@ const Index = () => {
               {filteredArchive.map((item) => (
                 <div
                   key={item.id}
+                  onClick={() => setSelectedArchive(item)}
                   className="border-b border-cream-dark py-6 grid md:grid-cols-4 gap-4 hover:bg-cream-dark transition-colors px-4 -mx-4 cursor-pointer group"
                 >
                   <div>
@@ -452,6 +513,86 @@ const Index = () => {
             </div>
           )}
         </main>
+      )}
+
+      {/* ══ ARCHIVE MODAL ══ */}
+      {selectedArchive && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+          onClick={() => setSelectedArchive(null)}
+        >
+          <div className="absolute inset-0 bg-ash/70 backdrop-blur-sm" />
+          <div
+            className="relative bg-cream max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slide-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="ornament-band" />
+
+            {/* Header */}
+            <div className="bg-forest px-8 py-6 flex items-start justify-between gap-4">
+              <div>
+                <div className="font-golos text-[10px] text-gold/70 tracking-[0.3em] uppercase mb-1">
+                  {selectedArchive.type} · {selectedArchive.date}
+                </div>
+                <div className="font-cormorant text-cream text-2xl font-light leading-snug">
+                  {selectedArchive.title}
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedArchive(null)}
+                className="text-cream/50 hover:text-cream transition-colors mt-1 flex-shrink-0"
+              >
+                <Icon name="X" size={20} />
+              </button>
+            </div>
+
+            <div className="px-8 py-8 space-y-7">
+
+              {/* Место хранения */}
+              <div className="flex items-start gap-3 bg-cream-dark border-l-2 border-gold px-5 py-4">
+                <Icon name="Archive" size={14} className="text-gold mt-0.5 flex-shrink-0" />
+                <div>
+                  <div className="font-golos text-[10px] text-stone tracking-wide uppercase mb-0.5">Место хранения</div>
+                  <div className="font-golos text-sm text-ash-mid">{selectedArchive.storage}</div>
+                </div>
+              </div>
+
+              {/* Описание */}
+              <div>
+                <div className="font-cormorant-sc text-[10px] tracking-[0.3em] text-gold mb-3">АННОТАЦИЯ</div>
+                <div className="font-golos text-sm text-ash-mid leading-relaxed font-light">
+                  {selectedArchive.content}
+                </div>
+              </div>
+
+              {/* Перечень */}
+              {selectedArchive.entries && selectedArchive.entries.length > 0 && (
+                <div>
+                  <div className="font-cormorant-sc text-[10px] tracking-[0.3em] text-gold mb-4">СОСТАВ ФОНДА</div>
+                  <div className="space-y-3">
+                    {selectedArchive.entries.map((entry, i) => (
+                      <div key={i} className="flex items-start gap-3 border-b border-cream-dark pb-3">
+                        <div className="w-5 h-5 bg-forest text-cream flex items-center justify-center font-golos text-[10px] flex-shrink-0 mt-0.5">
+                          {i + 1}
+                        </div>
+                        <div className="font-golos text-sm text-ash-mid font-light leading-relaxed">{entry}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <button
+                onClick={() => setSelectedArchive(null)}
+                className="w-full border border-forest text-forest font-golos text-xs tracking-wide py-3 hover:bg-forest hover:text-cream transition-colors"
+              >
+                ЗАКРЫТЬ ДОКУМЕНТ
+              </button>
+            </div>
+
+            <div className="ornament-band" />
+          </div>
+        </div>
       )}
 
       {/* ── FOOTER ── */}
