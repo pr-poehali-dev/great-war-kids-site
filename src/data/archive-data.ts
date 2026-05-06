@@ -74,6 +74,7 @@ export interface ArchiveItem {
   storage: string;
   content: string;
   entries?: string[];
+  photos?: { src: string; caption: string }[];
 }
 
 export const archiveItems: ArchiveItem[] = [
@@ -90,6 +91,12 @@ export const archiveItems: ArchiveItem[] = [
       "Фото № 9–17: Дети на улицах оккупированного Майкопа, осень 1942.",
       "Фото № 18–29: Разрушенные жилые кварталы, зима 1942–1943.",
       "Фото № 30–47: Освобождение Майкопа, январь 1943. Встреча красноармейцев.",
+    ],
+    photos: [
+      { src: "https://cdn.poehali.dev/projects/063346cf-35af-47f1-a0b1-34fd8d951972/files/e0502ab0-bd61-40ab-995c-7e8e909dd893.jpg", caption: "Фото № 1–8: Майкоп, август 1942. Немецкие войска входят в город." },
+      { src: "https://cdn.poehali.dev/projects/063346cf-35af-47f1-a0b1-34fd8d951972/files/eaedf7ea-fb4e-47fa-809b-a189f9a32b7e.jpg", caption: "Фото № 9–17: Дети на улицах оккупированного Майкопа, осень 1942." },
+      { src: "https://cdn.poehali.dev/projects/063346cf-35af-47f1-a0b1-34fd8d951972/files/06a828c1-7778-48c1-bd2b-6199092c9a63.jpg", caption: "Фото № 18–29: Разрушенные жилые кварталы, зима 1942–1943." },
+      { src: "https://cdn.poehali.dev/projects/063346cf-35af-47f1-a0b1-34fd8d951972/files/efae3e35-be82-4922-b260-6b1771062f57.jpg", caption: "Фото № 30–47: Освобождение Майкопа, январь 1943. Встреча красноармейцев." },
     ],
   },
   {
